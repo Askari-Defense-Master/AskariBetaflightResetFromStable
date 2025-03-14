@@ -172,6 +172,7 @@ COMMON_SRC = \
             flight/mixer_tricopter.c \
             flight/pid.c \
             flight/pid_init.c \
+            flight/askari.c\
             flight/position.c \
             flight/pos_hold_multirotor.c \
             flight/pos_hold_wing.c \
@@ -446,6 +447,7 @@ SPEED_OPTIMISED_SRC += \
             fc/rc.c \
             fc/rc_controls.c \
             fc/runtime_config.c \
+            flight/askari.c \
             flight/dyn_notch_filter.c \
             flight/imu.c \
             flight/mixer.c \

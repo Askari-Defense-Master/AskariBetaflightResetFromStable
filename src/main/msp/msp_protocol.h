@@ -276,3 +276,9 @@
 #define MSP_DEBUGMSG                    253  // out message: debug string buffer
 #define MSP_DEBUG                       254  // out message: debug1,debug2,debug3,debug4
 #define MSP_V2_FRAME                    255  // MSPv2 payload indicator
+
+//For Askari Betaflight
+#define MSP_ASKARI                      260 // in message          Sets the state of the pid controller -> angular
+      // velocities of each axis and thrust and expectes Sends back IMU data,
+      // attitude data, motor speed data. All data needed for state estimation
+      // in a higher level controller (Jetson or pi)

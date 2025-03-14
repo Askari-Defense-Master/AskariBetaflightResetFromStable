@@ -80,3 +80,95 @@
 // For this target, functions decorated FAST_CODE_PREF will not be put into ITCM RAM; 
 // on other targets, the same function *will* go into ITCM RAM
 #define FAST_CODE_PREF
+
+//Askari Custom Features
+#undef USE_MAG
+#undef USE_GPS
+#undef USE_RX_PPM
+#undef USE_RX_PWM
+
+#undef USE_SERIALRX_SUMD       // Graupner Hott protocol
+#undef USE_SERIALRX_SUMH       // Graupner legacy protocol
+
+#undef USE_SERIALRX_CRSF       // Team Black Sheep Crossfire protocol
+#undef USE_SERIALRX_GHST       // ImmersionRC Ghost Protocol
+#undef USE_SERIALRX_IBUS       // FlySky and Turnigy receivers
+#undef USE_SERIALRX_SPEKTRUM   // SRXL, DSM2 and DSMX protocol
+#undef USE_SERIALRX_FPORT      // FrSky FPort
+#undef USE_SERIALRX_XBUS       // JR
+#undef USE_SERIALRX_SRXL2      // Spektrum SRXL2 protocol
+
+#undef LED_STRIP
+#undef TELEMETRY_FRSKY
+
+#undef USE_TELEMETRY_FRSKY_HUB
+#undef USE_TELEMETRY_SMARTPORT
+#undef USE_TELEMETRY_CRSF
+#undef USE_TELEMETRY_GHST
+#undef USE_TELEMETRY_SRXL
+
+#undef USE_TELEMETRY_IBUS
+#undef USE_TELEMETRY_IBUS_EXTENDED
+#undef USE_TELEMETRY_JETIEXBUS
+#undef USE_TELEMETRY_MAVLINK
+#undef USE_TELEMETRY_HOTT
+#undef USE_TELEMETRY_LTM
+
+
+#undef USE_SERVOS
+#undef USE_OSD_SD
+#undef USE_OSD_HD
+#undef USE_RACE_PRO
+
+
+#undef USE_VTX_COMMON
+#undef USE_VTX_CONTROL
+#undef USE_VTX_SMARTAUDIO
+#undef USE_VTX_TRAMP
+#undef USE_VTX_MSP
+#undef USE_VTX_TABLE
+
+#undef USE_BARO_BMP388
+#undef USE_BARO_SPI_BMP388
+#undef USE_BARO_LPS
+#undef USE_BARO_SPI_LPS
+#undef USE_BARO_QMP6988
+#undef USE_BARO_SPI_QMP6988
+#undef USE_BARO_DPS310
+#undef USE_BARO_SPI_DPS310
+#undef USE_BARO_BMP085
+#undef USE_BARO_2SMBP_02B
+#undef USE_BARO_SPI_2SMBP_02B
+#undef USE_BARO_LPS22DF
+#undef USE_BARO_SPI_LPS22DF
+
+#undef USE_ACC_MPU6500
+#undef USE_GYRO_MPU6500
+#undef USE_ACC_SPI_MPU6000
+#undef USE_GYRO_SPI_MPU6000
+#undef USE_ACC_SPI_MPU6500
+#undef USE_GYRO_SPI_MPU6500
+#undef USE_ACC_SPI_ICM20689
+#undef USE_GYRO_SPI_ICM20689
+#undef USE_ACCGYRO_LSM6DSO
+#undef USE_GYRO_SPI_ICM42605
+#undef USE_GYRO_SPI_ICM42688P
+#undef USE_ACC_SPI_ICM42605
+#undef USE_ACC_SPI_ICM42688P
+#undef USE_ACCGYRO_LSM6DSV16X
+
+#undef USE_RX_CC2500
+#undef USE_RX_EXPRESSLRS
+#undef USE_RX_SX1280
+#undef USE_RX_SX127X
+
+#undef USE_FLASHFS
+#undef USE_FLASH_TOOLS
+#undef USE_FLASH_M25P16
+#undef USE_FLASH_W25N01G    // 1Gb NAND flash support
+#undef USE_FLASH_W25N02K    // 2Gb NAND flash support
+#undef USE_FLASH_W25M       // Stacked die support
+#undef USE_FLASH_W25M512    // 512Kb (256Kb x 2 stacked) NOR flash support
+#undef USE_FLASH_W25M02G    // 2Gb (1Gb x 2 stacked) NAND flash support
+#undef USE_FLASH_W25Q128FV  // 16MB Winbond 25Q128
+#undef USE_FLASH_PY25Q128HA // 16MB PUYA SEMI 25Q128
