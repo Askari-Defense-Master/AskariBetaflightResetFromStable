@@ -6,8 +6,6 @@
 
 #include "common/maths.h"
 #include "common/streambuf.h"
-#include "common/utils.h"
-#include "fc/runtime_config.h"
 
 #include "msp/msp_protocol.h"
 
@@ -21,7 +19,6 @@
 #include "sensors/gyro_init.h"
 
 #include "rx/msp.h"
-#include "rx/rx.h"
 
 enum AXIS { // roll, pitch, throttle, yaw, aux1, aux2
   ROLL = 0,
