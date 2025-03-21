@@ -10,15 +10,14 @@
 #include "msp/msp_protocol.h"
 
 #include "flight/imu.h"
-#include "flight/position.h"
 
 #include "sensors/acceleration.h"
-#include "sensors/barometer.h"
 #include "sensors/compass.h"
 #include "sensors/gyro.h"
 #include "sensors/gyro_init.h"
 
 #include "rx/msp.h"
+// #include "rx/rx.h"
 
 enum AXIS { // roll, pitch, throttle, yaw, aux1, aux2
   ROLL = 0,
