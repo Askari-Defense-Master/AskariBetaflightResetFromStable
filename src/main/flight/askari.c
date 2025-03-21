@@ -23,11 +23,6 @@
 #include "rx/msp.h"
 #include "rx/rx.h"
 
-#include "fc/rc_modes.h"
-#include "io/beeper.h"
-
-#define PACKET_TIMEOUT_US 100000 // 1/10Hz =100ms in microseconds - 10Hz
-
 enum AXIS { // roll, pitch, throttle, yaw, aux1, aux2
   ROLL = 0,
   PITCH,
@@ -42,7 +37,6 @@ mspResult_e mspProcessAskariCommand(mspDescriptor_t srcDesc, int16_t cmdMSP,
   UNUSED(srcDesc);
 
   const unsigned int dataSize = sbufBytesRemaining(src);
-  //---
   switch (cmdMSP) {
   case MSP_ASKARI: {
     // Handle the RX receive
@@ -54,15 +48,18 @@ mspResult_e mspProcessAskariCommand(mspDescriptor_t srcDesc, int16_t cmdMSP,
       for (int i = 0; i < channelCount; i++) {
         frame[i] = sbufReadU16(src);
       }
-
       rxMspFrameReceive(frame,
                         channelCount); // to set aux1,aux2,throttle and yaw
     }
-
     // SENDING BACK ATTITUDE DATA
     sbufWriteU16(dst, attitude.values.roll);
     sbufWriteU16(dst, attitude.values.pitch);
     sbufWriteU16(dst, attitude.values.yaw);
+
+    // SENDING BACK GYRO DATA
+    for (int i = 0; i < 3; i++) {
+      sbufWriteU16(dst, gyroRateDps(i));
+    }
     break;
   }
   default:
