@@ -11,17 +11,10 @@
 #define SUPPORTED_STATE_CHANNEL_COUNT 6
 extern int16_t askariSetpoints[3];
 extern bool useAskari;
-
-typedef struct pidAskari_s
-{
-    float derivateGains[2];
-    float integralGains[2];
-} pidAskari_t;
-
-extern pidAskari_t pidAskari;
 typedef int mspDescriptor_t;
 
-mspResult_e mspProcessAskariCommand(mspDescriptor_t srcDesc, int16_t cmdMSP, sbuf_t *src,sbuf_t *dst);
+mspResult_e mspProcessAskariCommand(mspDescriptor_t srcDesc, int16_t cmdMSP,
+                                    sbuf_t *src, sbuf_t *dst);
 
 float getAskariSetpointRates(int axis);
 
