@@ -6,7 +6,6 @@
 
 #include "common/maths.h"
 #include "common/streambuf.h"
-#include "common/utils.h"
 
 #include "msp/msp_protocol.h"
 
@@ -18,7 +17,6 @@
 #include "sensors/gyro_init.h"
 
 #include "rx/msp.h"
-#include "rx/rx.h"
 
 enum AXIS { // roll, pitch, throttle, yaw, aux1, aux2
   ROLL = 0,
@@ -48,7 +46,6 @@ mspResult_e mspProcessAskariCommand(mspDescriptor_t srcDesc, int16_t cmdMSP,
       rxMspFrameReceive(frame,
                         channelCount); // to set aux1,aux2,throttle and yaw
     }
-
     // SENDING BACK ATTITUDE DATA
     sbufWriteU16(dst, attitude.values.roll);
     sbufWriteU16(dst, attitude.values.pitch);
